@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "swagger": "node ./swagger.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
   }
 }

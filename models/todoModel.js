@@ -4,7 +4,7 @@ class TodoModel {
   constructor () {
     this.todoList = [
       {
-        id: uuidv4(),
+        id: '1',
         title: 'default todo'
       }
     ]
