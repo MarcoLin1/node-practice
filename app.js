@@ -9,6 +9,7 @@ const swaggerDocument = require('./swagger-output.json')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const todoRouter = require('./routes/todo');
+const errorRouter = require('./routes/errorRouter'); // 載入 errorRouter
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/todo', todoRouter)
+app.use('/error', errorRouter) // 設定 errorRouter 的路徑
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)) // 設定 swagger 的路徑
 
 // catch 404 and forward to error handler
